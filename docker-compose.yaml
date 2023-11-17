@@ -1,0 +1,10 @@
+services:
+  adp-backstage-demo2:
+    build:
+      context: .
+      target: production
+    image: adp-backstage-demo2
+    container_name: adp-backstage-demo2
+    environment:
+      APPINSIGHTS_CLOUDROLE: adp-backstage-demo2-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
